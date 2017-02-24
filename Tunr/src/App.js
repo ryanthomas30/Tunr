@@ -11,6 +11,29 @@ class App extends Component {
 		};
 	}
 
+	render() {
+		return (
+			<div className="App">
+				<Sound
+					url="E2.mp3"
+					playStatus={this._PlayStatus} />
+				<div className="App-header">
+					<h1>Tunr</h1>
+				</div>
+				<div className="Buttons">
+					<Button
+						changeSound={this._ChangeSound}
+						newNote='E2'
+						noteTitle='E' />
+					<Button
+						changeSound={this._ChangeSound}
+						newNote='A3'
+						noteTitle='A' />
+				</div>
+			</div>
+		);
+	}
+
 	_ChangeSound(newNote) {
 		switch (newNote) {
 			case 'E2':
@@ -39,29 +62,6 @@ class App extends Component {
 		} else {
 			return Sound.status.PLAYING;
 		}
-	}
-
-	render() {
-		return (
-			<div className="App">
-				<Sound
-					url="E2.mp3"
-					playStatus={this._PlayStatus} />
-				<div className="App-header">
-					<h1>Tunr</h1>
-				</div>
-				<div className="Buttons">
-					<Button
-						changeSound={this._ChangeSound}
-						newNote='E2'
-						noteTitle='E' />
-					<Button
-						changeSound={this._ChangeSound}
-						newNote='A3'
-						noteTitle='A' />
-				</div>
-			</div>
-		);
 	}
 }
 
