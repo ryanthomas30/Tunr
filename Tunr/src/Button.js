@@ -8,7 +8,7 @@ class Button extends Component {
 	}
 	render() {
 		return(
-			<button className='Button' onClick={() => this.props.changeSound(this.props.newNote)}>{this.props.noteTitle}</button>
+			<button className='Button' onClick={() => this.props.changeSound(this.props.newNote).bind(this)}>{this.props.noteTitle}</button>
 		)
 	}
 }
