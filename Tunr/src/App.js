@@ -7,7 +7,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			note : null
+			note : 1
 		};
 	}
 
@@ -18,16 +18,16 @@ class App extends Component {
 					url="E2.mp3"
 					playStatus={this._PlayStatus} />
 				<div className="App-header">
-					<h1>Tunr</h1>
+					<h1>{this.state.note}</h1>
 				</div>
 				<div className="Buttons">
 					<Button
 						changeSound={this._ChangeSound}
-						newNote='E2'
+						newNote={1}
 						noteTitle='E' />
 					<Button
 						changeSound={this._ChangeSound}
-						newNote='A3'
+						newNote={2}
 						noteTitle='A' />
 				</div>
 			</div>
@@ -36,28 +36,28 @@ class App extends Component {
 
 	_ChangeSound(newNote) {
 		switch (newNote) {
-			case 'E2':
+			case 1:
 				if(this.state.note === newNote) {
 					this.setState({note : null});
 				} else {
-					this.setState({note : 'E2'});
+					this.setState({note : 1});
 				}
 				break;
-			case 'A2':
+			case 2:
 				if(this.state.note === newNote) {
 					this.setState({note : null});
 				} else {
-					this.setState({note : 'A2'});
+					this.setState({note : 2});
 				}
 				break;
 			default:
 				break;
 		}
-		console.log(this.state);
+		console.log(this.state.note);
 	}
 
 	_PlayStatus = () => {
-		if(this.state.note === null){
+		if(this.state.note === 0){
 			return Sound.status.STOPPED;
 		} else {
 			return Sound.status.PLAYING;
