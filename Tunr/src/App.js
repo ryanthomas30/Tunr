@@ -1,67 +1,45 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
+import NoteButton from './NoteButton.js';
 import './App.css';
-import Button from './Button.js';
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			note : 1
+			note : ''
 		};
+		this.changeNote = this.changeNote.bind(this);
+	}
+
+	changeNote(note) {
+		this.setState({
+			note: this.state.note === note ? '' : note
+		});
 	}
 
 	render() {
+		const { note } = this.state;
+		let noteURL = `${note}.mp3`;
+		const playStatus = note === '' ? Sound.status.STOPPED : Sound.status.PLAYING;
+
 		return (
 			<div className="App">
-				<Sound
-					url="E2.mp3"
-					playStatus={this._PlayStatus} />
+				<Sound url={noteURL} playStatus={playStatus} />
 				<div className="App-header">
 					<h1>{this.state.note}</h1>
 				</div>
 				<div className="Buttons">
-					<Button
-						changeSound={this._ChangeSound}
-						newNote={1}
-						noteTitle='E' />
-					<Button
-						changeSound={this._ChangeSound}
-						newNote={2}
-						noteTitle='A' />
+					<NoteButton changeNote={this.changeNote} note='B'/>
+					<NoteButton changeNote={this.changeNote} note='E'/>
+					<NoteButton changeNote={this.changeNote} note='A'/>
+					<NoteButton changeNote={this.changeNote} note='D'/>
+					<NoteButton changeNote={this.changeNote} note='G'/>
+					<NoteButton changeNote={this.changeNote} note='B'/>
+					<NoteButton changeNote={this.changeNote} note='E'/>
 				</div>
 			</div>
 		);
-	}
-
-	_ChangeSound(newNote) {
-		switch (newNote) {
-			case 1:
-				if(this.state.note === newNote) {
-					this.setState({note : null});
-				} else {
-					this.setState({note : 1});
-				}
-				break;
-			case 2:
-				if(this.state.note === newNote) {
-					this.setState({note : null});
-				} else {
-					this.setState({note : 2});
-				}
-				break;
-			default:
-				break;
-		}
-		console.log(this.state.note);
-	}
-
-	_PlayStatus = () => {
-		if(this.state.note === 0){
-			return Sound.status.STOPPED;
-		} else {
-			return Sound.status.PLAYING;
-		}
 	}
 }
 
