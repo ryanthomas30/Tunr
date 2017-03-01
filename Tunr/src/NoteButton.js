@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
-import './Button.css';
+import './NoteButton.css';
 
 class NoteButton extends Component {
 	static propTypes = {
