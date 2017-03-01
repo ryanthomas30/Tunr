@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
+import ReactHowler from 'react-howler';
 import NoteButton from './NoteButton.js';
 import './App.css';
-import './audio-files/A1.mp3';
 
 class App extends Component {
 	constructor(props) {
@@ -21,12 +21,12 @@ class App extends Component {
 
 	render() {
 		const { note } = this.state;
-		const noteURL = `${note}.mp3`;
-		const playStatus = note === '' ? Sound.status.STOPPED : Sound.status.PLAYING;
+		const noteURL = `./audio-files/${note}.mp3`;
+		const playStatus = note === '' ? false : true;
 
 		return (
 			<div className="App">
-				<Sound url={noteURL} playStatus={playStatus} />
+				<ReactHowler src={noteURL} playStatus={playStatus} loop={true} />
 				<div className="App-header">
 					<h1>{this.state.note}</h1>
 				</div>
