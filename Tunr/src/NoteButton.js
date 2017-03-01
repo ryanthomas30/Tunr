@@ -5,6 +5,7 @@ import './NoteButton.css';
 class NoteButton extends Component {
 	static propTypes = {
 		note: React.PropTypes.string,
+		noteTitle: React.PropTypes.string,
 		changeNote: React.PropTypes.func
 	}
 
@@ -12,10 +13,10 @@ class NoteButton extends Component {
 		super(props);
 	}
 	render() {
-		const { changeNote, note } = this.props;
+		const { changeNote, note, noteTitle } = this.props;
 		return(
 			<button onClick={changeNote.bind(null, note)}>
-				{note}
+				{noteTitle}
 			</button>
 		)
 	}
