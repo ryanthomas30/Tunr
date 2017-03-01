@@ -20,7 +20,7 @@ class App extends Component {
 
 	render() {
 		const { note } = this.state;
-		let noteURL = `${note}.mp3`;
+		const noteURL = `${note}.mp3`;
 		const playStatus = note === '' ? Sound.status.STOPPED : Sound.status.PLAYING;
 
 		return (
