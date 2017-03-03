@@ -5,7 +5,6 @@
     "changelog": "lerna-changelog",
     "create-react-app": "tasks/cra.sh",
     "e2e": "tasks/e2e-simple.sh",
-    "postinstall": "lerna bootstrap",
     "publish": "tasks/release.sh",
     "start": "node packages/react-scripts/scripts/start.js",
     "test": "node packages/react-scripts/scripts/test.js --env=jsdom"
