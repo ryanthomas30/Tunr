@@ -23,12 +23,13 @@ class App extends Component {
 		const { note } = this.state;
 		const noteURL = `./audio-files/${note}.mp3`;
 		const playStatus = note === '' ? false : true;
+		const logo = `./Tunr Logo Full.png`;
 
 		return (
 			<div className="App">
 				<ReactHowler src={noteURL} playStatus={playStatus} loop={true} />
 				<div className="App-header">
-					<h1>Tunr</h1>
+					<img className="Logo" src= {logo} />
 				</div>
 				<div className="Buttons">
 					<NoteButton changeNote={this.changeNote} note='B0' noteTitle='B' />
