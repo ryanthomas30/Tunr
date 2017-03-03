@@ -15,9 +15,9 @@ class NoteButton extends Component {
 	render() {
 		const { changeNote, note, noteTitle } = this.props;
 		return(
-			<button onClick={changeNote.bind(null, note)}>
-				{noteTitle}
-			</button>
+				<button className="Button" onClick={changeNote.bind(null, note)}>
+					{noteTitle}
+				</button>
 		)
 	}
 }
