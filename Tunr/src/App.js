@@ -28,7 +28,7 @@ class App extends Component {
 			<div className="App">
 				<ReactHowler src={noteURL} playStatus={playStatus} loop={true} />
 				<div className="App-header">
-					<h1>{this.state.note}</h1>
+					<h1>Tunr</h1>
 				</div>
 				<div className="Buttons">
 					<NoteButton changeNote={this.changeNote} note='B0' noteTitle='B' />
