@@ -1,23 +1,22 @@
 {
+  "name": "Tunr",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "build": "node packages/react-scripts/scripts/build.js",
-    "changelog": "lerna-changelog",
-    "create-react-app": "tasks/cra.sh",
-    "e2e": "tasks/e2e-simple.sh",
-    "publish": "tasks/release.sh",
-    "start": "node packages/react-scripts/scripts/start.js",
-    "test": "node packages/react-scripts/scripts/test.js --env=jsdom"
-  },
   "devDependencies": {
-    "babel-eslint": "7.1.0",
-    "eslint": "3.8.1",
-    "eslint-config-react-app": "0.5.1",
-    "eslint-plugin-flowtype": "2.21.0",
-    "eslint-plugin-import": "2.0.1",
-    "eslint-plugin-jsx-a11y": "2.2.3",
-    "eslint-plugin-react": "6.4.1",
-    "lerna": "^2.0.0-beta.37",
-    "lerna-changelog": "^0.2.3"
+    "react-scripts": "0.9.0"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-howler": "^3.5.0",
+    "react-native": "^0.42.0",
+    "react-paper-ripple": "^0.2.1",
+    "react-sound": "^0.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
