@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Sound from 'react-sound';
 import ReactHowler from 'react-howler';
 import NoteButton from './NoteButton.js';
 import './App.css';
@@ -34,7 +33,7 @@ class App extends Component {
 			<div className="App">
 				<ReactHowler src={noteURL} playStatus={playStatus} loop={true} />
 				<div className="App-header">
-					<img className="Logo" src= {logo} />
+					<img className="Logo" src={logo} />
 				</div>
 				<div className="Buttons">
 					<NoteButton changeNote={this.changeNote} note='B0' noteTitle='B' buttonLight={this.buttonLight} />

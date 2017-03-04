@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Sound from 'react-sound';
+import PaperRipple from 'react-paper-ripple';
 import './NoteButton.css';
 
 class NoteButton extends Component {
@@ -15,10 +15,10 @@ class NoteButton extends Component {
 	render() {
 		const { changeNote, note, noteTitle, buttonLight  } = this.props;
 		return(
-				<button className="Button" onClick={changeNote.bind(null, note)}>
+				<PaperRipple color="#dde2e2" className="Button" onClick={changeNote.bind(null, note)}>
 					{noteTitle}
 					<div className={buttonLight(note)}/>
-				</button>
+				</PaperRipple>
 		)
 	}
 }
