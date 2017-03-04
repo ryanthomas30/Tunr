@@ -11,12 +11,17 @@ class App extends Component {
 			note : ''
 		};
 		this.changeNote = this.changeNote.bind(this);
+		this.buttonLight = this.buttonLight.bind(this);
 	}
 
 	changeNote(note) {
 		this.setState({
 			note: this.state.note === note ? '' : note
 		});
+	}
+
+	buttonLight(note) {
+		return this.state.note === note ? "ButtonOn" : "ButtonOff";
 	}
 
 	render() {
@@ -32,13 +37,13 @@ class App extends Component {
 					<img className="Logo" src= {logo} />
 				</div>
 				<div className="Buttons">
-					<NoteButton changeNote={this.changeNote} note='B0' noteTitle='B' />
-					<NoteButton changeNote={this.changeNote} note='E1' noteTitle='E' />
-					<NoteButton changeNote={this.changeNote} note='A1' noteTitle='A' />
-					<NoteButton changeNote={this.changeNote} note='D2' noteTitle='D' />
-					<NoteButton changeNote={this.changeNote} note='G2' noteTitle='G' />
-					<NoteButton changeNote={this.changeNote} note='B2' noteTitle='B' />
-					<NoteButton changeNote={this.changeNote} note='E3' noteTitle='E' />
+					<NoteButton changeNote={this.changeNote} note='B0' noteTitle='B' buttonLight={this.buttonLight} />
+					<NoteButton changeNote={this.changeNote} note='E1' noteTitle='E' buttonLight={this.buttonLight} />
+					<NoteButton changeNote={this.changeNote} note='A1' noteTitle='A' buttonLight={this.buttonLight} />
+					<NoteButton changeNote={this.changeNote} note='D2' noteTitle='D' buttonLight={this.buttonLight} />
+					<NoteButton changeNote={this.changeNote} note='G2' noteTitle='G' buttonLight={this.buttonLight} />
+					<NoteButton changeNote={this.changeNote} note='B2' noteTitle='B' buttonLight={this.buttonLight} />
+					<NoteButton changeNote={this.changeNote} note='E3' noteTitle='E' buttonLight={this.buttonLight} />
 				</div>
 			</div>
 		);
