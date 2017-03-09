@@ -35,14 +35,16 @@ class App extends Component {
 				<div className="App-header">
 					<img className="Logo" src={logo} />
 				</div>
-				<div className="Buttons">
-					<NoteButton changeNote={this.changeNote} note='B0' noteTitle='B' buttonLight={this.buttonLight} />
-					<NoteButton changeNote={this.changeNote} note='E1' noteTitle='E' buttonLight={this.buttonLight} />
-					<NoteButton changeNote={this.changeNote} note='A1' noteTitle='A' buttonLight={this.buttonLight} />
-					<NoteButton changeNote={this.changeNote} note='D2' noteTitle='D' buttonLight={this.buttonLight} />
-					<NoteButton changeNote={this.changeNote} note='G2' noteTitle='G' buttonLight={this.buttonLight} />
-					<NoteButton changeNote={this.changeNote} note='B2' noteTitle='B' buttonLight={this.buttonLight} />
-					<NoteButton changeNote={this.changeNote} note='E3' noteTitle='E' buttonLight={this.buttonLight} />
+				<div className="vertical-align">
+					<div className="Buttons">
+						<NoteButton changeNote={this.changeNote} note='B0' noteTitle='B' buttonLight={this.buttonLight} />
+						<NoteButton changeNote={this.changeNote} note='E1' noteTitle='E' buttonLight={this.buttonLight} />
+						<NoteButton changeNote={this.changeNote} note='A1' noteTitle='A' buttonLight={this.buttonLight} />
+						<NoteButton changeNote={this.changeNote} note='D2' noteTitle='D' buttonLight={this.buttonLight} />
+						<NoteButton changeNote={this.changeNote} note='G2' noteTitle='G' buttonLight={this.buttonLight} />
+						<NoteButton changeNote={this.changeNote} note='B2' noteTitle='B' buttonLight={this.buttonLight} />
+						<NoteButton changeNote={this.changeNote} note='E3' noteTitle='E' buttonLight={this.buttonLight} />
+					</div>
 				</div>
 			</div>
 		);
