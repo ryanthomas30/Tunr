@@ -4,19 +4,19 @@ Seven string guitar tuner web application.
 
 ## Running Locally
 
-clone repo
+#### Clone Repo
 
 `git clone git@github.com:ryanthomas30/tunr.git`
 
-#### move into folder
+#### Move Into Folder
 
 `cd ~/tunr`
 
-#### install dependencies
+#### Install Dependencies
 
 `npm install`
 
-#### run dev mode
+#### Run Dev Mode
 
 `npm start`
 
